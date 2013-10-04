@@ -1,3 +1,4 @@
+$BROWSER = 'C:\Program Files (x86)\Mozilla Firefox\firefox.exe'
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
@@ -39,4 +40,13 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+end
+
+# here be some dragons
+# https://github.com/copiousfreetime/launchy/issues/65
+class Launchy::Application::Browser
+  def self.handles?(uri)
+    return true if schemes.include?(uri.scheme)
+    return true if File.exist?(uri.path) && !schemes.include?(uri.scheme)
+  end
 end
