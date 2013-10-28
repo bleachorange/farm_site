@@ -4,9 +4,7 @@
 /* navbar and its elements */
 
 .logo-home {
-  text-align:left;
-  margin-right:50px;
-  width: 200px;
+  $square: 200px;
 }
 
 .page-header {
@@ -123,13 +121,13 @@ body,
 .carousel,
 .carousel-inner,
 .carousel-inner .item {
-  height: 480px;
+  height: 650px;
   margin-bottom:0px;
   background-size:100%;
 }
 
 .carousel-inner {
-  height:480px;
+  height:650px;
 }
 
 .item:nth-child(1) {

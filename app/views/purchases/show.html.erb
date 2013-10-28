@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @purchase.product_id %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @purchase.profile_id %>
+</p>
+
+<p>
+  <strong>Purchases:</strong>
+  <%= @purchase.purchases_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @purchase.user_id %>
+</p>
+
+<p>
+  <strong>Services:</strong>
+  <%= @purchase.services_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @purchase.date %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_path(@purchase) %> |
+<%= link_to 'Back', purchases_path %>

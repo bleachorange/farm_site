@@ -11,7 +11,78 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131002223058) do
+ActiveRecord::Schema.define(version: 20131028224956) do
+
+  create_table "authentications", force: true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "oauth_token"
+    t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "favorites", force: true do |t|
+    t.string   "user_id"
+    t.string   "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "services_id"
+  end
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.decimal  "price_per_unit"
+    t.string   "unit_of_measure"
+    t.boolean  "in_stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "in_season"
+    t.integer  "product_id"
+  end
+
+  create_table "profiles", force: true do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "wishlist"
+    t.string   "purchase_history"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "purchase_histories", force: true do |t|
+    t.string   "user_id"
+    t.string   "profile_id"
+    t.string   "purchase_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "purchases_id"
+  end
+
+  create_table "purchases", force: true do |t|
+    t.string   "product_id"
+    t.string   "profile_id"
+    t.string   "purchases_id"
+    t.string   "user_id"
+    t.string   "services_id"
+    t.date     "date"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "services", force: true do |t|
+    t.string   "services_id"
+    t.string   "user_id"
+    t.string   "profile_id"
+    t.string   "services_name"
+    t.string   "services_price"
+    t.string   "services_timeslots"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -26,6 +97,9 @@ ActiveRecord::Schema.define(version: 20131002223058) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password"
+    t.string   "profile_id"
+    t.integer  "user_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

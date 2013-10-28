@@ -1,7 +1,26 @@
 FarmSite::Application.routes.draw do
 
+  resources :services
+
+  resources :purchase_histories
+
+  resources :purchases
+
+  resources :favorites
+
+  resources :profiles
+
+  resources :products
+
+  get "authentications/index"
   root to: "welcome#index"
   devise_for :users
+
+    resources :authentications
+
+  match 'auth/:provider/callback', to: 'authentications#create', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

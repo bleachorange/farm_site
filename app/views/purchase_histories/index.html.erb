@@ -1,0 +1,31 @@
+<h1>Listing purchase_histories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Profile</th>
+      <th>Purchase</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchase_histories.each do |purchase_history| %>
+      <tr>
+        <td><%= purchase_history.user_id %></td>
+        <td><%= purchase_history.profile_id %></td>
+        <td><%= purchase_history.purchase_id %></td>
+        <td><%= link_to 'Show', purchase_history %></td>
+        <td><%= link_to 'Edit', edit_purchase_history_path(purchase_history) %></td>
+        <td><%= link_to 'Destroy', purchase_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Purchase history', new_purchase_history_path %>

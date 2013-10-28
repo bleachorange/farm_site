@@ -58,6 +58,8 @@ group :development, :test do
   gem "guard-rspec"
   gem "guard-bundler"
   gem "rb-fsevent"
+  gem "omniauth"
+  gem 'omniauth-facebook', '1.4.0'
 end
 
 group :test do

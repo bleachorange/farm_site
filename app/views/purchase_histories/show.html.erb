@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @purchase_history.user_id %>
+</p>
+
+<p>
+  <strong>Profile:</strong>
+  <%= @purchase_history.profile_id %>
+</p>
+
+<p>
+  <strong>Purchase:</strong>
+  <%= @purchase_history.purchase_id %>
+</p>
+
+<%= link_to 'Edit', edit_purchase_history_path(@purchase_history) %> |
+<%= link_to 'Back', purchase_histories_path %>
