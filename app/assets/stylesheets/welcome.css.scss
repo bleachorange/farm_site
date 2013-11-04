@@ -3,19 +3,32 @@
 
 /* navbar and its elements */
 
-.logo-home {
-  $square: 200px;
-}
 
 .page-header {
   margin-top:0px;
   margin-bottom:0px;
+  min-width:800px;
   padding-bottom:0px;
   text-align:center;
 }
 
 .navbar-inner {
   border-radius:0px;
+  min-width:800px;
+  max-height:76px;
+}
+
+.logo-image {
+  padding-top:5px;
+  float:left;
+}
+
+.logo-name {
+  text-align:center;
+  font-size:26px;
+  padding-top:25px;
+  float:left;
+  padding-bottom:25px;
 }
 
 .nav-item {
@@ -41,200 +54,46 @@
 .login {
   margin-left:40px;
   width:250px;
+  padding-top:20px;
+  float:right;
+  padding-bottom:15px;
 }
 
 .login button {
   margin-bottom:10px;
+  float:right;
 }
-
-/* carousel */
-
-.carousel-fade {
-  .carousel-inner {
-    .item {
-      opacity: 0;
-      -webkit-transition-property: opacity;
-      -moz-transition-property: opacity;
-      -o-transition-property: opacity;
-      transition-property: opacity;
-      transition-duration: 1500ms;
-    }
-
-    .active {
-      opacity: 1;
-    }
-
-    .active.left,
-    .active.right {
-      left: 0;
-      opacity: 0;
-      z-index: 1;
-    }
-
-    .next.left,
-    .prev.right {
-      opacity: 1;
-    }
-  }
-
-  .carousel-control {
-    z-index: 2;
-    position:absolute;
-    margin-top:40px;
-    height:0px;
-    width:0px;
-    background-color: none;
-    opacity:0.6;
-    transition: opacity 500ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
-    border-radius:40px;
-    border:0px solid white;
-    color:white;
-    text-shadow:0 0 10px #333;
-  }
-
-  .carousel-control:hover {
-    opacity:1.0;
-    transition: opacity 500ms cubic-bezier(0.51, 0.01, 0.37, 0.98);
-    color:white;
-    text-decoration:none;
-  }
-
-  #left-chevron {
-    margin-left:15px;
-  }
-
-  #right-chevron {
-    position:relative;
-    right:70px;
-  }
-
-  .carousel-control i {
-    position:relative;
-    top:7px;
-  }
-}
-
-
 
 html,
 body,
 .carousel,
 .carousel-inner,
 .carousel-inner .item {
-  height: 650px;
+  min-height: 650px;
+  min-width:800px;
   margin-bottom:0px;
   background-size:100%;
+  background-repeat:no-repeat;
 }
 
 .carousel-inner {
   height:650px;
+  min-width:800px;
+  min-height:650px;
 }
 
 .item:nth-child(1) {
-  background-image:url("https://robertsspaceindustries.com/media/uwj83eh6vyscfr/source/SHOTATMOrear.JPG");
-}
-
-.item:nth-child(2) {
-  background-image:url("https://robertsspaceindustries.com/media/pnk7od6fm5iuir/source/Gladiator_Front_Hobbins.png");
-}
-
-.item:nth-child(3) {
-  background-image:url("https://robertsspaceindustries.com/media/8gt387oljrk4nr/source/Avenger_wip_f.jpg");
-}
-
-/* carousel forms */
-
-.signup-form {
-  position:relative;
-  top:100px;
-  left:125px;
-}
-
-.signup-form legend {
-  text-align:left;
-  line-height:105%;
-  color:white;
-  font-size:40px;
-  font-weight:100;
-  padding-bottom:5px;
-}
-
-.signup input {
-  padding-top:5px;
-  padding-bottom:5px;
-  padding-left:15px;
-  font-size:16px;
-  border: 1px solid;
-  box-shadow: 0 0px 5px 1px #ccc;
-}
-
-#email {
-  position:relative;
-  left:10px;
-  width:345px;
-}
-
-#password {
-  position:relative;
-  left:30px;
-  width:150px;
-}
-
-#confirm-password {
-  position:relative;
-  left:48px;
-  width:150px;
-}
-
-#signup-btn {
-  position:relative;
-  right:10px;
-  width:368px;
-}
-
-/* carousel social bar and video */
-
-.video-pane {
-  position:relative;
-  left:220px;
-  top:90px;
-
-  .img-polaroid {
-    height:250px;
-    width:550px;
-    margin-bottom:20px;
-    box-shadow:0px 0px 5px 1px #484848;
-  }
-
-  .icon-twitter {
-    color:#4099FF;
-    position:relative;
-    top:5px;
-  }
-
-  .icon-facebook {
-    color:#3b5998;
-    position:relative;
-    top:5px;
-  }
-}
-
-.social-tags {
-  text-align:center;
-  list-style:none;
-  font-size:40px;
-
-  a {
-    text-decoration:none;
-    color:white;
-    padding-left:20px;
-  }
+  background-image:url("http://knowyourfarmstour.com/wp-content/uploads/2013/08/AlleeBubbaFarm_FarmersAndHorseRider-1024x682.jpg");
+  background-image:center;
+  min-width:800px;
+  min-height:650px;
 }
 
 /* page navigation bar */
 
 #page-nav {
   height:50px;
+  min-width:800px;
   background-color: #fafafa;
   background-image: -moz-linear-gradient(top, #ffffff, #e4e4e4);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e4e4e4));

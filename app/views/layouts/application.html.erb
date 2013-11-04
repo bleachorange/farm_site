@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>Aitfc</title>
-  <%= stylesheet_link_tag    "welcome" %>
+  <%= stylesheet_link_tag "welcome" %>
   <%= javascript_include_tag "welcome" %>
   <%= csrf_meta_tags %>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".nav">
@@ -15,56 +16,29 @@
 <header class="page-header" id="topheader">
   <div class="navbar-static">
     <div class="navbar-inner">
-       <ul class="inline">
-        <li>
+      <ul class="inline">
+        <li class="logo-image">
          <%= image_tag "alleebubba_64.png" %>
         </li>
         <li>
-          <%= link_to "Social Accounts", authentications_path %>
-        </li>
-        <li class="nav-item"><a href="#" class="patients-item lead">Patients</a>
-        </li>
+        <li class="logo-name">Allee Bubba</li>
         <li class="login">
           <input class="span2" type="text" placeholder="username">
           <button type="submit" class="btn btn-success">Sign in</button>
         </li>
         </li>
-       </ul>
+      </ul>
    </div>
   </div>
 </header>
 
 <div id="carousel" class="carousel slide carousel-fade">
-
-  <!-- Carousel items -->
-  <div class="carousel-inner">
+<div class="carousel-inner">
     <div class="active item">
-      <div id="signup-carousel" class="span5 signup-form">
-       <form class="signup">
-        <fieldset>
-          <legend class="form-title lead">Sign up today and<br>find your perfect doctor.</legend>
-          <input id="email" class="span4" type="text" placeholder="E-mail address">
-          <div class="row">
-           <input class="span2" id="password" type="Password" placeholder="Password"></input>
-           <input class="span2" id="confirm-password" type="password" placeholder="Confirm Password"></input>
-          </div>
-          <button id="signup-btn" class="span4 btn btn-primary">Sign Up Now, it's free!</button>
-        </fieldset>
-       </form>
-     </div>
-     
     </div>
-
-
     <div class="item"></div>
-
-
     <div class="item"></div>
   </div>
-
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#carousel" data-slide="prev"><i id="left-chevron" class="icon-chevron-left icon-large"></i></a>
-  <a class="carousel-control right" href="#carousel" data-slide="next"><i id="right-chevron" class="icon-chevron-right icon-large"></i></a>
 </div>
 
 <!-- page content nav bar -->
@@ -72,33 +46,29 @@
 <div class="pagebar" id="page-nav">
  <nav>
   <ul class="nav lead inline">
-    <li><a href="#whoweare">Who We Are</a></li>
-    <li><a href="#whatwedo">What We Do</a></li>
-    <li><a href="#joinus">Join Us</a></li>
-    <li><a href="#latestnews">Latest News</a></li>
+    <li><a href="#whoweare">Market</a></li>
+    <li><a href="#whatwedo">Events</a></li>
+    <li><a href="#joinus">About Us</a></li>
+    <li><a href="#latestnews">Partners</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
  </nav>
 </div>
 </header>
 
-<div class="section-a" id="#whoweare">
+<div class="section-a" id="#market">
 </div>
 
-<div class="section-b" id="#whatwedo">
+<div class="section-b" id="#events">
 </div>
-
-<div class="section-a" id="#joinus">
+    
+<div class="section-a" id="#aboutus">
 </div>
-
-<div class="section-b" id="#latestnews">
+    
+<div class="section-b" id="#partners">
 </div>
-
+    
 <div class="section-a" id="#contact">
 </div>
-
-<footer>
-  <p class="credits">&copy;2013 Empathyze <a href="#" title="Empathyze">All Rights Reserved</a></p>
-</footer>
 
 </body>
