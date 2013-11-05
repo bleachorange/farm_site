@@ -2,12 +2,13 @@
 <html>
 <head>
   <title>Aitfc</title>
-  <%= stylesheet_link_tag    "welcome" %>
+  <%= stylesheet_link_tag "welcome" %>
   <%= javascript_include_tag "welcome" %>
   <%= csrf_meta_tags %>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.0/js/bootstrap.min.js"></script>
 </head>
 
 <body data-spy="scroll" data-target=".nav">
@@ -15,57 +16,59 @@
 <header class="page-header" id="topheader">
   <div class="navbar-static">
     <div class="navbar-inner">
-       <ul class="inline">
-        <li>
+      <ul class="inline">
+        <li class="logo-image">
          <%= image_tag "alleebubba_64.png" %>
         </li>
         <li>
-          <%= "Allee Bubba" %>
-        </li>
-        <li class="nav-item"><a href="#" class="patients-item lead">Patients</a>
-        </li>
+        <li class="logo-name">Allee Bubba</li>
         <li class="login">
           <input class="span2" type="text" placeholder="username">
           <button type="submit" class="btn btn-success">Sign in</button>
         </li>
         </li>
-       </ul>
+      </ul>
    </div>
   </div>
 </header>
+
+<div id="carousel" class="carousel slide carousel-fade">
+<div class="carousel-inner">
+    <div class="active item">
+    </div>
+    <div class="item"></div>
+    <div class="item"></div>
+  </div>
+</div>
 
 <!-- page content nav bar -->
 <header id="page-content-nav">
 <div class="pagebar" id="page-nav">
  <nav>
   <ul class="nav lead inline">
-    <li><a href="#whoweare">Who We Are</a></li>
-    <li><a href="#whatwedo">What We Do</a></li>
-    <li><a href="#joinus">Join Us</a></li>
-    <li><a href="#latestnews">Latest News</a></li>
+    <li><a href="#market">Market</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#aboutus">About Us</a></li>
+    <li><a href="#partners">Partners</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
  </nav>
 </div>
 </header>
 
-<div class="section-a" id="#whoweare">
+<div class="section-a" id="#market">
 </div>
 
-<div class="section-b" id="#whatwedo">
+<div class="section-b" id="#events">
 </div>
-
-<div class="section-a" id="#joinus">
+    
+<div class="section-a" id="#aboutus">
 </div>
-
-<div class="section-b" id="#latestnews">
+    
+<div class="section-b" id="#partners">
 </div>
-
+    
 <div class="section-a" id="#contact">
 </div>
-
-<footer>
-  <p class="credits">&copy;2013 Empathyze <a href="#" title="Empathyze">All Rights Reserved</a></p>
-</footer>
 
 </body>
